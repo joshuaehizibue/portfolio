@@ -20,11 +20,11 @@ const Research = () => {
                     <div className="label" style={{ marginBottom: '20px' }}>Data Lab</div>
                     <h2 className="display-lg">Market Forensics</h2>
                 </div>
-                <div>
+                <div style={{ marginTop: '40px' }}>
                     <p className="body-text" style={{ marginBottom: '40px' }}>
                         Our research division uses quantitative analysis to uncover user patterns others miss. We don't guess; we measure.
                     </p>
-                    <div style={{ display: 'flex', gap: '40px' }}>
+                    <div style={{ display: 'flex', gap: '40px', flexWrap: 'wrap' }}>
                         <div className="stat-block">
                             <h3 className="display-num">12M</h3>
                             <div className="label">Data Points</div>

@@ -56,6 +56,7 @@ const Services = () => {
                             key={i}
                             className={`service-item${i === activeIndex ? ' active' : ''}`}
                             onMouseEnter={() => activateService(i)}
+                            onClick={() => activateService(i)}
                         >
                             <span>{String(i + 1).padStart(2, '0')}</span>
                             {label}
@@ -99,7 +100,7 @@ const Services = () => {
                             </p>
                         </div>
 
-                        <div style={{ alignSelf: 'flex-end' }}>
+                        <div style={{ alignSelf: 'flex-end', marginTop: 'auto', paddingTop: '40px' }}>
                             <span className="label" style={{ display: 'block', marginBottom: '8px' }}>
                                 Capacity Load
                             </span>

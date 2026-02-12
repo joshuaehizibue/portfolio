@@ -37,7 +37,7 @@ const Hero = () => {
                     <p className="body-text">
                         Streamlivr Technologies Inc. is a product studio that builds, launches, and scales consumer apps, AI platforms, and Web3 infrastructure — from first prototype to global distribution and millions of users.
                     </p>
-                    <div className="hero-ctas" style={{ display: 'flex', gap: '16px', marginTop: '24px' }}>
+                    <div className="hero-ctas" style={{ display: 'flex', gap: '16px', marginTop: '24px', flexWrap: 'wrap' }}>
                         <a href="#portfolio" className="cta-primary">
                             View Our Work
                         </a>

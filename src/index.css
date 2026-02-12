@@ -801,144 +801,129 @@ header {
   transform: scale(1.05);
 }
 
-.address-text {
-  font-size: 1.2rem;
-  color: var(--text-secondary);
-  line-height: 1.6;
-}
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1200px) {
+  :root {
+    --container-width: 960px;
+  }
 
-/* ===== FOOTER ===== */
-.footer-section {
-  background: var(--bg-surface);
-  padding: 80px 0 40px;
-  margin-bottom: 100px;
-}
+  .display-xl {
+    font-size: 6rem;
+  }
 
-.footer-grid {
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1.5fr;
-  gap: 60px;
-  margin-bottom: 60px;
-}
+  .app-grid-full {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
-.footer-links-group {
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-}
-
-.footer-link {
-  font-size: 0.95rem;
-  color: var(--text-secondary);
-  text-decoration: none;
-  padding: 8px 0;
-  transition: color 0.2s, transform 0.2s;
-  display: block;
-}
-
-.footer-link:hover {
-  color: var(--text-primary);
-  transform: translateX(4px);
-}
-
-.footer-bottom {
-  border-top: 1px solid rgba(0, 0, 0, 0.08);
-  padding-top: 32px;
-}
-
-.footer-bottom p {
-  font-size: 0.85rem;
-  color: var(--text-secondary);
-  line-height: 1.5;
-}
-
-/* ===== DOCK ===== */
-.dock-container {
-  position: fixed;
-  bottom: 40px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: rgba(230, 230, 230, 0.8);
-  backdrop-filter: blur(20px);
-  padding: 12px 16px;
-  border-radius: 999px;
-  display: flex;
-  align-items: center;
-  gap: 40px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
-  z-index: 999;
-}
-
-.dock-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 6px;
-  cursor: pointer;
-  color: var(--text-primary);
-  text-decoration: none;
-}
-
-.dock-icon {
-  width: 24px;
-  height: 24px;
-  background: transparent;
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-}
-
-.dock-label {
-  font-size: 0.7rem;
-  font-weight: 600;
-  text-transform: uppercase;
-}
-
-.action-fab {
-  width: 64px;
-  height: 64px;
-  background-color: black;
-  border-radius: 50%;
-  color: white;
-  display: grid;
-  place-items: center;
-  transition: transform 0.2s;
-  cursor: pointer;
-  margin-left: 20px;
-  text-decoration: none;
-}
-
-.action-fab:hover {
-  transform: scale(1.1);
-}
-
-/* ===== ANIMATIONS ===== */
-.reveal {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 0.8s forwards;
-}
-
-@keyframes fadeInUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
+  .service-wheel-container {
+    height: 60vh;
   }
 }
 
-.delay-1 {
-  animation-delay: 0.1s;
-}
+@media (max-width: 768px) {
+  :root {
+    --container-width: 100%;
+  }
 
-.delay-2 {
-  animation-delay: 0.2s;
-}
+  .container {
+    padding: 0 20px;
+  }
 
-.delay-3 {
-  animation-delay: 0.3s;
-}
+  .display-xl {
+    font-size: 4rem;
+  }
 
-/* ===== SMOOTH SCROLL ===== */
-html {
-  scroll-behavior: smooth;
+  .display-lg {
+    font-size: 2.5rem;
+  }
+
+  /* Header */
+  header {
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+  }
+
+  .nav-links {
+    display: none;
+    /* Mobile menu TODO: Implement hamburger or simplify */
+  }
+
+  /* Hero */
+  .hero-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .hero {
+    padding-top: 120px;
+  }
+
+  /* About */
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Services */
+  .service-wheel-container {
+    display: flex;
+    flex-direction: column-reverse;
+    height: auto;
+  }
+
+  .service-list {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    padding-bottom: 20px;
+    width: 100%;
+    gap: 20px;
+  }
+
+  .service-item {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+  }
+
+  .lens-card {
+    min-height: 400px;
+    padding: 30px;
+  }
+
+  /* Portfolio */
+  .app-grid-full {
+    grid-template-columns: 1fr;
+  }
+
+  /* Research */
+  .dot-grid-card {
+    grid-template-columns: 1fr;
+    padding: 40px;
+    gap: 40px;
+  }
+
+  /* Tech Stack */
+  .tech-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Why Streamlivr */
+  .why-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* CTA Banner */
+  .cta-banner-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cta-banner {
+    padding: 40px;
+  }
+
+  /* Contact */
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
 }
