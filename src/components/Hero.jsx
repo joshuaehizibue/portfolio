@@ -26,13 +26,13 @@ const Hero = () => {
                     <div className="label">Product Studio</div>
                     <h1 className="display-xl">
                         Build.<br />
-                        Scale.<br />
-                        Ship.
+                        Ship.<br />
+                        Scale.
                     </h1>
                 </div>
                 <div className="flex-col gap-sm reveal delay-2" style={{ paddingBottom: '20px' }}>
                     <p className="body-text" style={{ fontSize: '1.3rem', maxWidth: '55ch' }}>
-                        Building AI &amp; Web3 Products That Power the Next Digital Economy
+                        Building Software Products That Power the Next Digital Economy
                     </p>
                     <p className="body-text">
                         Streamlivr Technologies Inc. is a product studio that builds, launches, and scales consumer apps, AI platforms, and Web3 infrastructure — from first prototype to global distribution and millions of users.
