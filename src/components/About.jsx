@@ -37,7 +37,7 @@ const About = () => {
                 </div>
 
                 <div className="about-industries-card">
-                    <div className="label" style={{ marginBottom: '24px' }}>We operate at the intersection of</div>
+                    <div className="label" style={{ marginBottom: '24px', whiteSpace: 'normal', wordWrap: 'break-word', maxWidth: '100%' }}>We operate at the intersection of</div>
                     <div className="industries-list hide-scrollbar" ref={listRef}>
                         {industries.map((industry, i) => (
                             <div key={i} className="industry-item">

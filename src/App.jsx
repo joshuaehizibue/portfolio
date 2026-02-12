@@ -9,7 +9,6 @@ import WhyStreamlivr from './components/WhyStreamlivr'
 import CTABanner from './components/CTABanner'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
-import Dock from './components/Dock'
 
 function App() {
     return (
@@ -27,7 +26,6 @@ function App() {
             <CTABanner />
             <Contact />
             <Footer />
-            <Dock />
         </>
     )
 }
