@@ -2,13 +2,13 @@ const reasons = [
     {
         title: 'Built for Scale',
         desc: 'Our products are architected for viral growth — from 1,000 beta users to millions across global markets with zero infrastructure rewrites.',
-        metric: '10M+',
+        metric: '300K+',
         metricLabel: 'Users Reached',
     },
     {
         title: 'Distribution-First GTM',
         desc: 'Every product ships with a go-to-market playbook: ASO, growth loops, paid channels, influencer partnerships, and analytics-driven iteration to drive acquisition and retention.',
-        metric: '7',
+        metric: '10+',
         metricLabel: 'Live Products',
     },
     {

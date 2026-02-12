@@ -12,32 +12,6 @@ const Footer = () => {
                         </p>
                     </div>
 
-                    <div className="footer-links-group">
-                        <div className="label" style={{ marginBottom: '16px' }}>Company</div>
-                        <a href="#portfolio" className="footer-link">Portfolio</a>
-                        <a href="#about" className="footer-link">About</a>
-                        <a href="#services" className="footer-link">Services</a>
-                        <a href="#contact" className="footer-link">Contact</a>
-                    </div>
-
-                    <div className="footer-links-group">
-                        <div className="label" style={{ marginBottom: '16px' }}>Legal</div>
-                        <a href="#" className="footer-link">Privacy Policy</a>
-                        <a href="#" className="footer-link">Terms of Service</a>
-                    </div>
-
-                    <div className="footer-links-group">
-                        <div className="label" style={{ marginBottom: '16px' }}>Connect</div>
-                        <a href="mailto:business@streamlivr.com" className="footer-link">business@streamlivr.com</a>
-                        <a
-                            href="https://calendly.com/joshua-traction3"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="footer-link"
-                        >
-                            Book a Strategy Call
-                        </a>
-                    </div>
                 </div>
 
                 <div className="footer-bottom">
