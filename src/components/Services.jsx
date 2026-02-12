@@ -60,6 +60,10 @@ const Services = () => {
                         >
                             <span>{String(i + 1).padStart(2, '0')}</span>
                             {label}
+                            {/* Mobile-only description (visible via CSS) */}
+                            <div className="service-item-desc">
+                                {services[i].desc}
+                            </div>
                         </div>
                     ))}
                 </div>
