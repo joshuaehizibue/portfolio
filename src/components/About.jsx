@@ -1,3 +1,6 @@
+import { useRef } from 'react'
+import useAutoScroll from '../hooks/useAutoScroll'
+
 const industries = [
     'Artificial Intelligence',
     'Consumer Technology',
@@ -7,7 +10,11 @@ const industries = [
     'Emerging Market Distribution',
 ]
 
+
 const About = () => {
+    const listRef = useRef(null)
+    useAutoScroll({ containerRef: listRef, interval: 2500, scrollAmount: 200 })
+
     return (
         <section className="about-section container" id="about">
             <div className="label" style={{ marginBottom: '40px' }}>Who We Are</div>
@@ -31,7 +38,7 @@ const About = () => {
 
                 <div className="about-industries-card">
                     <div className="label" style={{ marginBottom: '24px' }}>We operate at the intersection of</div>
-                    <div className="industries-list hide-scrollbar">
+                    <div className="industries-list hide-scrollbar" ref={listRef}>
                         {industries.map((industry, i) => (
                             <div key={i} className="industry-item">
                                 <span className="industry-number">{String(i + 1).padStart(2, '0')}</span>

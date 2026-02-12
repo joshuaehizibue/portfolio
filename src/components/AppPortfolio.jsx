@@ -1,3 +1,6 @@
+import { useRef } from 'react'
+import useAutoScroll from '../hooks/useAutoScroll'
+
 const apps = [
     {
         name: 'Parentii',
@@ -142,18 +145,24 @@ const AppCard = ({ app }) => (
     </div>
 )
 
-const AppPortfolio = () => (
-    <section className="portfolio-section container" id="portfolio">
-        <div className="label" style={{ marginBottom: '16px' }}>Our Work</div>
-        <p className="body-text" style={{ marginBottom: '40px' }}>
-            Products we've built, launched, and scaled — from concept to millions of users across global markets.
-        </p>
-        <div className="app-grid-full">
-            {apps.map((app, i) => (
-                <AppCard key={i} app={app} />
-            ))}
-        </div>
-    </section>
-)
+
+const AppPortfolio = () => {
+    const scrollRef = useRef(null)
+    useAutoScroll({ containerRef: scrollRef, interval: 2500, scrollAmount: 320 })
+
+    return (
+        <section className="portfolio-section container" id="portfolio">
+            <div className="label" style={{ marginBottom: '16px' }}>Our Work</div>
+            <p className="body-text" style={{ marginBottom: '40px' }}>
+                Products we've built, launched, and scaled — from concept to millions of users across global markets.
+            </p>
+            <div className="app-grid-full" ref={scrollRef}>
+                {apps.map((app, i) => (
+                    <AppCard key={i} app={app} />
+                ))}
+            </div>
+        </section>
+    )
+}
 
 export default AppPortfolio

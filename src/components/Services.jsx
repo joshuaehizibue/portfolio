@@ -1,4 +1,5 @@
-import { useState, useCallback } from 'react'
+import { useState, useCallback, useRef } from 'react'
+import useAutoScroll from '../hooks/useAutoScroll'
 
 const services = [
     {
@@ -33,6 +34,9 @@ const serviceLabels = ['AI Infrastructure', 'Mobile Apps', 'Web3 & Blockchain', 
 const Services = () => {
     const [activeIndex, setActiveIndex] = useState(0)
     const [fading, setFading] = useState(false)
+    const listRef = useRef(null)
+
+    useAutoScroll({ containerRef: listRef, interval: 2500, scrollAmount: 300 })
 
     const activateService = useCallback((index) => {
         if (index === activeIndex) return
@@ -50,7 +54,7 @@ const Services = () => {
             <div className="label" style={{ marginBottom: '40px' }}>What We Do</div>
 
             <div className="service-wheel-container">
-                <div className="service-list">
+                <div className="service-list" ref={listRef}>
                     {serviceLabels.map((label, i) => (
                         <div
                             key={i}
